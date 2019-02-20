@@ -9,7 +9,9 @@ return this.journeys.map(function(el){
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-
+  return this.journeys.map(function(el){
+    return el.endLocation
+  })
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
