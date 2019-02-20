@@ -37,8 +37,14 @@ return this.journeys.reduce(
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
-};
+  return this.journeys.reduce(
+    (accumulator,current) => {
+      if (accumulator.includes(current.transport) === false){
+      accumulator.push(current.transport);}
+      return accumulator;
+    },[]
+  );
+  }
 
 
 module.exports = Traveller;
